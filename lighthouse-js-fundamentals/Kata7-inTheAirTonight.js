@@ -4,7 +4,7 @@ const checkAir = function (samples, threshold) {
     if(samples[i] === "dirty"){
       airQuality ++;
     }
-  }if(threshold < airQuality/samples.length){
+  }if(threshold < 0.40 || threshold < airQuality/samples.length){
     return "polluted";
   }else{
     return "clean";
