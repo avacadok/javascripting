@@ -24,3 +24,5 @@ console.log("Ingredients for banana chocolate bread are:")
 for(let k = ingredients.length -1 ; k >= 0; k--){
   console.log(ingredients[k]);
 }
+
+console.log(ingredients.length)
