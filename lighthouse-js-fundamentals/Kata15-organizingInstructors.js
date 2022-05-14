@@ -1,12 +1,16 @@
-const organizeInstructors = function(instructors) {
+const organizeInstructors = function (instructors) {
   let result = {};
-  for (const instructor of instructors){
-   if(result[instructor.course]){
-    result[instructor.course].push(instructor.name);
-   }else{
-     result[instructor.course] = [instructor.name];
-   }
-  }return result
+  for (let instructor of instructors) {
+  //check if the result{} does not already contain instructor.course; 
+    if (!result [instructor.course]) {
+  //if the condition above is true, then we push instructor.course into 
+  //result{} and set the value as an empty array
+      result[instructor.course] = [];
+    }
+  //then push the instructor.name into the array
+      result[instructor.course].push(instructor.name)
+  }
+  return result
 };
 
 console.log(organizeInstructors([
