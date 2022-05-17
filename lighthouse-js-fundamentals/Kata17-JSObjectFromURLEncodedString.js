@@ -2,7 +2,7 @@ const urlDecode = function(letters) {
   let output = {};
   letters = letters.replace(/%20/g," ").replace(/&/g,"=");
   const arr = letters.split("=");
-//loop through each pair of value
+//loop through each pair (2 index at a time) of value
   for(let i = 0; i < arr.length; i += 2){
    output[arr[i]] = arr[i+1];
 //arr[i] which is duck with index [0] and arr[i+1] = rubber(second index of the arr)
