@@ -1,7 +1,7 @@
 const organizeInstructors = function (instructors) {
   let result = {};
   for (let instructor of instructors) {
-  //check if the result{} does not already contain instructor.course; 
+  //! --> check if result [instructor.course] does not already have a value; 
     if (!result [instructor.course]) {
   //if the condition above is true, then we push instructor.course into 
   //result{} and set the value as an empty array
@@ -25,3 +25,4 @@ console.log(organizeInstructors([
   {name: "Martha", course: "iOS"},
   {name: "Carlos", course: "Web"}
 ]));
+
